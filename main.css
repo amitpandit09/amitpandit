@@ -11,7 +11,7 @@ background-color:#343a40!important
 background-color:#007bff!important
 }
 .header{
- background-image: url('backgroundwall.jpg');
+ background-image: url("https://amitpandit09.github.io/amitpandit/backgroundwall.jpg");
  background-attachment: fixed;
  background-size: cover;
  background-position: center;
