@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "itemId": "C1IA0001",
+      "itemName": "Hybrid Cycle (Red)",
+      "categoryId": "C1",
+      "description": "This cycle is semi assembled and can be customized later. It has been used only for 2 years single handed.It is usually for people above 15 years of age",
+      "rating":"3",
+      "imageUrl":"/resources/C1IA0001.jpg" 
+    },
+    {
+     "itemId": "C1IA0002",
+      "itemName": "Racket",
+      "categoryId": "C1",
+      "description": "The racquets in this series boast of a Muscle Power Frame that provides high repulsion power and sharp shots.Shock Less Grommet System",
+      "rating":"3",
+      "imageUrl":"/resources/C1IA0002.jpg" 
+    },
+    {
+      "itemId": "C1IA0003",
+      "itemName": "Cricket Kit",
+      "categoryId": "C1",
+      "description": "Suitable for ages 4-12 years, your child will be hitting people for 6 in no time! This Cricket set comes with size 3 cricket bat (Poplar Willow), cricket tennis soft ball, 3 Wickets (size 24 Inches)",
+      "rating":"4",
+      "imageUrl":"/resources/C1IA0003.jpg" 
+    },
+    {
+      "itemId": "C2IA0001",
+      "itemName": "GREBook",
+      "categoryId": "C2",
+      "description": "The best-selling 5 lb. Book of GRE Practice Problems has been updated to offer more advanced online resources and hundreds of new questions",
+      "rating":"2",
+       "imageUrl":"/resources/C2IA0001.jpg" 
+    },
+    {
+     "itemId": "C2IA0002",
+      "itemName": "Toefl Book",
+      "categoryId": "C2",
+      "description": "English language learning, and elementary, secondary, and postsecondary education, and by conducting education research, analysis, and policy studies",
+      "rating":"3",
+        "imageUrl":"/resources/C2IA0002.jpg" 
+    },
+    {
+      "itemId": "C2IA0003",
+      "itemName": "JavaBook",
+      "categoryId": "C2",
+      "description": "The book comprises of chapters on the Java language, the Java library, GUI programming with Swing, GUI programming with JavaFX and applying Java",
+      "rating":"4",
+      "imageUrl":"/resources/C2IA0003.jpg" 
+    },
+     {
+      "itemId": "C3IA0001",
+      "itemName": "Television",
+      "categoryId": "C3",
+      "description": "This TV which offers high-definition picture quality, sharp display, and optimal surround sound",
+      "rating":"5",
+      "imageUrl":"/resources/C3IA0001.jpg" 
+    },
+     {
+      "itemId": "C3IA0002",
+      "itemName": "Table",
+      "categoryId": "C3",
+      "description": "Wooden Foldable Laptop Bed Table . Which can be use for Office, School, Home, This superior quality Foldable Laptop Table gives you an extremely comfortable laptop/study table wherever you go",
+      "rating":"3",
+       "imageUrl":"/resources/C3IA0002.jpg" 
+    },
+     {
+      "itemId": "C3IA0003",
+      "itemName": "Lamp",
+      "categoryId": "C3",
+      "description": "Enhance your room with a contemporary look with this pack fine sconce wall lamps brought to you by Plus Products Enterprise",
+      "rating":"4",
+       "imageUrl":"/resources/C3IA0003.jpg" 
+    },
+     {
+      "itemId": "C4IA0001",
+      "itemName": "Juicer Mixer",
+      "categoryId": "C4",
+      "description": "The portable juice blender bottle is lightweight and convenient to carry.Healthy and Eco-Friendly design",
+      "rating":"3",
+      "imageUrl":"/resources/C4IA0001.jpeg" 
+    },
+     {
+      "itemId": "C4IA0002",
+      "itemName": "Radio",
+      "categoryId": "C4",
+      "description": "Nothing can replace the joy of listening to old songs on an FM radio on a lazy Sunday morning. This FM radio from Philips does not just give you great sound but also has a very stylish look",
+      "rating":"2",
+      "imageUrl":"/resources/C4IA0002.jpeg" 
+    },
+     {
+      "itemId": "C4IA0003",
+      "itemName": "Old used Cellphone",
+      "categoryId": "C4",
+      "description": "Stunning visuals on a 15.2-cm (5.99) FHD+ display, a powerful 1.8 GHz Snapdragon 636 processor, and expandable memory of up to 128 GB ",
+      "rating":"4",
+      "imageUrl":"/resources/C4IA0003.jpeg" 
+    },
+     {
+      "itemId": "C5IA0001",
+      "itemName": "Plant bucket",
+      "categoryId": "C5",
+      "description": "The team of Creative Farmer differentiated by their imagination, knowledge, experience and passion for agriculture brings to you innovative agro products",
+      "rating":"3",
+        "imageUrl":"/resources/C5IA0001.jpg" 
+    },
+     {
+      "itemId": "C5IA0002",
+      "itemName": "College Bag",
+      "categoryId": "C5",
+      "description": "This lightweight backpack comes with multiple organized compartments that make it perfect for your college/office or a weekend trip",
+      "rating":"4",
+        "imageUrl":"/resources/C5IA0002.jpg" 
+    },
+     {
+      "itemId": "C5IA0003",
+      "itemName": "Old plain books",
+      "categoryId": "C5",
+      "description": "Abstract Collection amazing single line ruled Notebooks having high-quality paper, Super Fine Digitally Printed Cover.",
+      "rating":"4",
+        "imageUrl":"/resources/C5IA0003.png" 
+    }
+  ],
+  "categories": [
+    {
+    "categoryId": "C1",
+    "categoryName": "Sports and Fitness"
+    },
+    {
+    "categoryId": "C2",
+    "categoryName": "Study and books"
+    },
+    {
+    "categoryId": "C3",
+    "categoryName": "Home"
+    },
+    {
+    "categoryId": "C4",
+    "categoryName": "Electronics"
+    },
+    {
+    "categoryId": "C5",
+    "categoryName": "Other"
+    }
+  ]
+}

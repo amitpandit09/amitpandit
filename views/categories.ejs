@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>
+      N item Swap
+      </title>
+   </head>
+ 
+<body>   
+  <% include partials/header.ejs %>  
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+
+      <ul class="navigation">
+         <li><a href="index">Home</a></li>
+      </ul>
+      <article class="articleClass">
+         <h2>Categories</h2>
+         <section>
+            <table class="sectionTable">
+                  <% var catName = ""; %>
+                    <% if(queryParameterProvided === true && categoryValid === true) { %>
+                        <tr>
+                          <th><%= categoryFilterd.categoryName %></th>
+                        </tr>
+                <% for(var j=0; j < itemList.getItemList().length; j++) { %>
+                      <% if(String(itemList.getItemList()[j].categoryId) === categoryFilterd.categoryId) { %>
+                <tr>
+                <td> • <a href='<%= "Item?itemId="+itemList.getItemList()[j].itemId %>'> <%= itemList.getItemList()[j].itemName %></a></td>          
+                </tr>
+                      <% } %>
+                <% } %>
+                    <% } else { %>
+                <% for(var i=0; i < categories.getCategories().length; i++) { %>
+                        <tr>
+                           <th><%= categories.getCategories()[i].categoryName %></th>
+                        </tr>
+               <% for(var j=0; j < itemList.getItemList().length; j++) { %>
+                      <% if(String(itemList.getItemList()[j].categoryId) === categories.getCategories()[i].categoryId) { %>
+               <tr>
+                <td> • <a href='<%= "Item?itemId="+itemList.getItemList()[j].itemId %>'> <%= itemList.getItemList()[j].itemName %></a></td>          
+               </tr>
+                   <% } %> 
+                  <% } %> 
+               <% } %>
+               <% } %>
+            </table>
+         </section>
+      </article>
+      <% include partials/footer.ejs %>
+   </body>
+</html>

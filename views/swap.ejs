@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>
+      N item Swap
+      </title>
+   </head>
+<body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+
+<div class="signInSection">
+<a href="categories">Back</a>
+</div>
+      <ul class="navigation">
+         <li><a href="index">Home</a></li>
+         <li><a href="categories">categories</a></li>
+         <li><a href="categories">Item</a></li>
+         <li>item</li>
+      </ul>
+      <article class="articleClass">
+         <h2>Swap this item</h2>
+         <section>
+            <table class="sectionTable">
+               <tr>
+                  <th>Category --> <%= categoryNameItem.categoryName %></th>
+               </tr>
+               <tr>
+                  <td>
+                     <img src='<%= item.imageUrl %>' alt="sportitem1" height="300" width="300"><br><b>Description</b><br>
+                     <p><%= item.description %></p>
+                     <br>
+                     <b>Select an item from your available swaps.</b>
+                      <table class="innerTable">
+
+                        <tr>
+                           <td><input type="radio" name="itemSwap" checked="checked">
+                           GRE Book</td>
+                        </tr>
+                         <tr>
+                           <td><input type="radio" name="itemSwap">
+                           Table</td>
+                        </tr>
+                     </table>
+                     <br>
+                     <a href="#" class="button swapItemButton">Confirm Swap</a>
+               </tr>
+            </table>
+         </section>
+      </article>
+     <% include partials/footer.ejs %>
+   </body>
+</html>

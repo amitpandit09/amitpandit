@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>
+      N item Swap
+      </title>
+   </head>
+<body>
+<% include partials/header.ejs %> 
+
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div class="signInSection">
+<a href="categories">Back</a>
+</div>
+      <ul class="navigation">
+         <li><a href="index">Home</a></li>
+         <li><a href="categories">categories</a></li>
+         <li>item</li>
+      </ul>
+      <article class="articleClass">
+         <h2><%= item.itemName %></h2>
+         <section>
+            <h3>one click away to swap and get item of your choice in replace !</h3>
+            <table class="sectionTable">
+               <tr>
+                  <th>Category --> <%= categoryNameItem.categoryName %></th>
+               </tr>
+               <tr>
+                  <td>
+                     <img src='<%= item.imageUrl %>' alt="sportitem1" height="300" width="300"><br><b>Description</b><br>
+                     <table class="nestedTable">
+                        <tr>
+                           <td><%= item.description %></td>
+                        </tr>
+                     </table>
+                     <br>
+                     <a href='<%= "swap?itemId="+item.itemId %>'class="button swapButton">Swap it</a>
+                     <br>
+                     <a href="myItems" class="button swapButton">Rate it</a>
+                  </td>
+               </tr>
+            </table>
+         </section>
+      </article>
+     <% include partials/footer.ejs %>
+   </body>
+</html>

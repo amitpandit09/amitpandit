@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <title>
+      N item Swap
+      </title>
+   </head>
+   <body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+      <ul class="navigation">
+         <li><a href="index.html">Home</a></li>
+         <li>My items</li>
+      </ul>
+      <article class="articleClass">
+         <h2>Items for swap</h2>
+         <section>
+            <h3>Add/Update the items for swap</h3>
+            <br>
+            <table class="sectionTable">
+               <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>My Rating</th>
+                  <th>Swapped</th>
+                  <th>Action</th>
+               </tr>
+               <tr>
+                  <td><a href="item">Zero bicycle</a></td>
+                  <td>Sports and Fitness</td>
+                  <td><img src="/resources/star.jpeg" alt="star" height="20" width="20"></td>
+                  <td><img src="/resources/reload.jpg" alt="star" height="20" width="20"></td>
+                  <td><a href="item" class="button swapButton">Update</a>&nbsp;<a href="#" class="button swapButton">Delete</a></td>
+               </tr>
+               <tr>
+                  <td><a href="item">Table</a></td>
+                  <td>Home</td>
+                  <td><img src="/resources/star.jpeg" alt="star" height="20" width="20"><img src="/resources/star.jpeg" alt="star" height="20" width="20"><img src="/resources/star.jpeg" alt="star" height="20" width="20"></td>
+                  <td><img src="/resources/tick.png" alt="tick" height="20" width="20"></td>
+                  <td><a href="item" class="button swapButton">Update</a>&nbsp;<a href="#" class="button swapButton">Delete</a></td>
+               </tr>
+               <tr>
+                  <td><a href="item">GRE Book</a></td>
+                  <td>Study and books</td>
+                  <td><img src="/resources/star.jpeg" alt="star" height="20" width="20"><img src="/resources/star.jpeg" alt="star" height="20" width="20"><img src="/resources/star.jpeg" alt="star" height="20" width="20"></td>
+                  <td><img src="/resources/tick.png" alt="tick" height="20" width="20"></td>
+                  <td><a href="item" class="button swapButton">Update</a>&nbsp;<a href="#" class="button swapButton">Delete</a></td>
+               </tr>
+            </table>
+            <br><br>
+            Legend : 
+            <table>
+               <tr>
+                  <td>
+                     <img src="/resources/reload.jpg" alt="star" height="20" width="20">swap available
+                  </td>
+               </tr>
+               <tr>
+                  <td><br><img src="/resources/tick.png" alt="tick" height="20" width="20"> already swapped</td>
+               </tr>
+            </table>
+         </section>
+      </article>
+      <% include partials/footer.ejs %>
+   </body>
+</html>
