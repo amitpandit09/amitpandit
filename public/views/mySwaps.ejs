@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+ <title>
+      N item Swap
+      </title>
+   </head>   
+   <body>
+   <% include partials/header.ejs %> 
+
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+      <ul class="navigation">
+         <li><a href="index.html">Home</a></li>
+         <li>My items</li>
+      </ul>
+      <article class="articleClass">
+         <h2>"N" Item Swap offers</h2>
+         <section>
+         
+              <form action="/mySwaps" method="POST">
+             <table class="sectionTable">
+              <% if(userFiltered === true) { %>
+                      <tr>
+                            <th>Item</th>
+                           <th>Swap Offer</th>
+                           <th>Action</th>
+                     </tr>
+                <tr>
+                  <td><%= userItem %></td>
+                  <td><%= swapItem %></td>
+                   <input type="hidden" name="itemList" value='<%= userItemId %>'>
+                  <td> <button input=submit name="accept" value='<%= userItemId %>'>Accept</button>
+                    &nbsp;<button input=submit name="reject" value='<%= userItemId %>'>Reject</button>
+                  <button input=submit name="withdraw" value='<%= userItemId %>'>Withdraw swap</button>
+                  </td>
+                </tr>
+              <% } else if(userFiltered === false) { %>
+
+                     <tr>
+                            <th>Item</th>
+                           <th>Swap Offer</th>
+                           <th>Status</th>
+                           <th>Action</th>
+                     </tr>
+                     
+                   <% for(var i=0; i < listOfPendingItems.listOfItems.length; i++) { %>
+                   <tr>
+                  <td><%= listOfPendingItems.listOfItems[i].userItem %></td>
+                  <td><%= listOfPendingItems.listOfItems[i].swapItem %></td>
+                  <td><%= listOfPendingItems.listOfItems[i].status %></td>
+                   <input type="hidden" name="itemList" value='<%= listOfPendingItems.listOfItems[i].userItemId %>'>
+                  <td> <button input=submit name="accept" value='<%= listOfPendingItems.listOfItems[i].userItemId %>'>Accept</button>
+                    &nbsp;<button input=submit name="reject" value='<%= listOfPendingItems.listOfItems[i].userItemId %>'>Reject</button>
+                  <button input=submit name="withdraw" value='<%= listOfPendingItems.listOfItems[i].userItemId %>'>Withdraw swap</button>
+                  </td>
+                  </tr>
+                  <% } %>
+              <% } %>
+
+            </table>
+           </form>
+         </section>
+      </article>
+      <% include partials/footer.ejs %>
+   </body>
+</html>

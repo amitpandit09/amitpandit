@@ -1,0 +1,240 @@
+@charset "ISO-8859-1";
+body {
+     font-size: 15px;
+     margin: 0;
+     font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+}
+
+nav {
+     background-color: green;
+     overflow: hidden;
+     height: 60px;
+}
+
+nav ul {
+     display: inline-block;
+}
+
+nav ul li {
+     display: inline-block;
+     list-style-type: none;
+}
+
+nav>ul>li>a {
+     color: white;
+     background-color: green;
+     display: block;
+     line-height: 2em;
+     padding: 0.5em 0.5em;
+     text-decoration: none;
+     cursor: pointer;
+}
+
+h1 {
+     color: white;
+     font-size: 35px;
+     margin-bottom: 20px;
+     margin-top: 30px;
+     text-align: center;
+     top: 200px;
+}
+
+h2 {
+     font-size: 20px;
+}
+
+.header {
+     font-size: 20px;
+     padding: 10px;
+     position: relative;
+     height: 55px;
+     background: url(headerbackground.jpg);
+     color: white;
+}
+
+.myCategories {
+     position: relative;
+     text-align: center;
+     background: url(headerbackground.jpg);
+}
+
+.myCategories nav {
+     background: url(headerbackground.jpg);
+     height: 40px;
+     padding: 0px;
+}
+
+.myCategories nav ul {
+     padding: 0px;
+}
+
+.myCategories a {
+     background-color: transparent;
+}
+
+.myCategories nav>ul {
+     margin: 0
+}
+
+.signInSection {
+     float: right;
+     padding: 3px;
+     display: inline;
+     cursor: pointer;
+     font-size: 16px;
+}
+
+.signInSection a {
+     text-decoration: none;
+     color: inherit;
+}
+
+.backSection a {
+     text-decoration: none;
+     color: inherit;
+}
+
+.pageCategories {
+     position: relative;
+     height: 585px;
+     background: url(headerbackground.jpg);
+     float: left;
+     display: block;
+}
+
+.pageCategories a {
+     /*background-color: green;*/
+     background: url(headerbackground.jpg);
+}
+
+.pageCategories .joinUs th {
+     color: white;
+}
+
+.pageCategories.joinUs tr th {
+     color: white;
+}
+
+img {
+     float: left;
+}
+
+aside ul li {
+     display: block;
+     list-style-type: none;
+     color: white;
+}
+
+aside>ul>li>a {
+     color: white;
+     background-color: green;
+     display: block;
+     text-decoration: none;
+     display: block;
+     cursor: pointer;
+}
+
+.articleClass .sectionTable {
+     background-color: #eee;
+     border-collapse: collapse;
+     padding: 5px;
+}
+
+.articleClass .sectionTable th {
+     color: black;
+}
+
+.articleClass .sectionTable td,
+.articleClass .sectionTable th {
+     padding: 0px;
+     border: 1px solid #000;
+     width: 20%;
+     text-align: left;
+}
+
+.articleClass .sectionTable .nestedTable {
+     background-color: #ff8040;
+     border-collapse: collapse;
+}
+
+.articleClass .sectionTable .nestedTable th {
+     background-color: #808080;
+     color: white;
+}
+
+.articleClass .sectionTable .nestedTable td,
+.articleClass .sectionTable .nestedTable th {
+     padding: 0px;
+     border: 1px solid #000;
+}
+
+.articleClass .sectionTable a {
+     text-decoration: none;
+}
+
+.articleClass .innerTable {
+     background-color: #85C1E9;
+     border-collapse: collapse;
+     width: 14.5%;
+}
+
+.articleClass .innerTable th {
+     background-color: #85C1E9;
+     color: white;
+}
+.articleClass .innerTable td,
+.innerTable th {
+     padding: 3px;
+     border: 1px solid #000;
+}
+.button {
+     background-color: #288cd7;
+     border: 1px;
+     color: white;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+}
+.swapButton {
+     padding: 10px 24px;
+}
+.swapItemButton {
+     padding: 10px 24px;
+     display: inline-block;
+}
+ul.navigation {
+     padding: 10px 16px;
+     list-style: none;
+     font-size: 15px;
+}
+ul.navigation li {
+     display: inline;
+     font-size: 15px;
+}
+ul.navigation li+li:before {
+     padding: 8px;
+     color: black;
+     content: "/\00a0";
+}
+ul.navigation li a {
+     color: #0275d8;
+     text-decoration: none;
+}
+ul.navigation li a:hover {
+     color: #01447e;
+     text-decoration: underline;
+}
+.footer {
+     position: fixed;
+     height: 50px;
+     text-align: center;
+     background: url(headerbackground.jpg);
+     bottom: 0px;
+     left: 0px;
+     right: 0px;
+     margin-bottom: 0px;
+     color: white;
+}

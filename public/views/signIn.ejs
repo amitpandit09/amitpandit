@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+ <title>
+      N item Swap
+      </title>
+   </head> 
+   <body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+      <ul class="navigation">
+         <li><a href="index.html">Home</a></li>
+         <li>Sign in</li>
+      </ul>
+      <article class="articleClass">
+         <h2>Sign in</h2>
+         <section>
+            <h3>You need to login first before doing any activity !</h3>
+            <form method="POST" action="/signIn">
+            <table class="sectionTable">
+               <tr>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>Email/Username</th>
+                  <th><input type="text" name="email" size="15"></th>
+               </tr>
+                <tr>
+                  <th>Password</th>
+                  <th><input type="password" name="password" size="15"></th>
+               </tr>
+                  <th></th>
+                  <th><button input=submit name="submit" value="submit">Login</button></th>
+
+               </tr>
+            </table>
+         </form>
+          <% if(invalid !== null) { %>
+         <p><font color="red"><%= invalid %></font></p>
+          <% } %>
+           <% if(email !== null) { %>
+         <p><font color="red"><%= email %></font></p>
+          <% } %>
+         <br>
+           New User? <a href="/signup">Click here</a>to register
+            <br>
+           Forgot Password? <a href="/forgotPassword">Click here</a>to reset password
+         </section>
+      </article>
+       <% include partials/footer.ejs %>
+   </body>
+</html>

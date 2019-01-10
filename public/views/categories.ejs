@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>
+      N item Swap
+      </title>
+   </head>
+ 
+<body>   
+  <% include partials/header.ejs %>  
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+
+      <ul class="navigation">
+         <li><a href="index">Home</a></li>
+      </ul>
+
+      <article class="articleClass">
+         <h2>Categories</h2>
+         <section>
+            <table class="sectionTable">
+               <% if(userFiltered === "false") { %>
+
+                  <% var catName = ""; %>
+                    <% if(queryParameterProvided === true && categoryValid === true) { %>
+                        <tr>
+                          <th><%= categoryName %></th>
+                        </tr>
+                <% for(var j=0; j < itemList.length; j++) { %>
+                     
+                <tr>
+                <td> • <a href='<%= "Item?itemId="+itemList[j].itemId %>'> <%= itemList[j].itemName %></a></td>          
+                </tr>
+
+                <% } %>
+                    <% } else { %>
+                <% for(var i=0; i < categories.length; i++) { %>
+                        <tr>
+                           <th><%= categories[i].categoryName %></th>
+                        </tr>
+               <% for(var j=0; j < itemList.length; j++) { %>
+                      <% if(String(itemList[j].categoryId) === categories[i].categoryId) { %>
+               <tr>
+                <td> • <a href='<%= "Item?itemId="+itemList[j].itemId %>'> <%= itemList[j].itemName %></a></td>          
+               </tr>
+                   <% } %> 
+                  <% } %> 
+               <% } %>
+               <% } %>
+
+               <% } else if(userFiltered === "true") { %>
+                <% for(var i=0; i < categories.length; i++) { %>
+                        <tr>
+                           <th><%= categories[i].categoryName %></th>
+                        </tr>
+               <% for(var j=0; j < userProfileItemList.items.length; j++) { %>
+              <% if(String(userProfileItemList.items[j].categoryId) === categories[i].categoryId) { %>
+               <tr>
+                <td> • <a href='<%= "Item?itemId="+userProfileItemList.items[j].itemId %>'> <%= userProfileItemList.items[j].itemName %></a></td>          
+               </tr>
+                   <% } %> 
+                  <% } %> 
+               <% } %>
+
+               <% } %>
+
+            </table>
+         </section>
+      </article>
+      <% include partials/footer.ejs %>
+   </body>
+</html>

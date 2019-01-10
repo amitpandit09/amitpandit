@@ -1,0 +1,19 @@
+<div class="myCategories">
+<nav>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<ul>
+<li><a href="mySwaps">My swaps |</a></li>
+<li><a href="myItems">My Items |</a></li>
+<li><a href="myorders">My orders |</a></li>
+</ul>
+</nav>
+<div class="signInSection">
+<% if(!UserName) { %>
+<a href="signIn">Sign in</a>
+<% } else { %>
+<i>Welcome <%= UserName %><i> &nbsp;
+<a href="signOut">Sign Out</a>
+<% } %>
+</div>
+</div>
+
