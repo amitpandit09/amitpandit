@@ -6,6 +6,39 @@
  <title>
       Home
       </title>
+	  
+	  <script>
+(function() {
+  $(document).ready(function() {
+    return $('#contact-form').submit(function(e) {
+      var email, message, name;
+      name = document.getElementById('inputName');
+      email = document.getElementById('inputEmail');
+      message = document.getElementById('inputMessage');
+      if (!name.value || !email.value || !message.value) {
+        alert('Please check your entries');
+        return false;
+      } else {
+	  alert('run');
+        $.ajax({
+          method: 'POST',
+          url: 'https://formspree.io/amitpandit09@gmail.com',
+          data: $('#contact-form').serialize(),
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        return alert('Message sent');
+      }
+    });
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBQSxDQUFBLENBQUUsUUFBRixDQUFXLENBQUMsS0FBWixDQUFrQixRQUFBLENBQUEsQ0FBQTtXQUNoQixDQUFBLENBQUUsZUFBRixDQUFrQixDQUFDLE1BQW5CLENBQTBCLFFBQUEsQ0FBQyxDQUFELENBQUE7QUFDeEIsVUFBQSxLQUFBLEVBQUEsT0FBQSxFQUFBO01BQUEsSUFBQSxHQUFPLFFBQVEsQ0FBQyxjQUFULENBQXdCLFdBQXhCO01BQ1AsS0FBQSxHQUFRLFFBQVEsQ0FBQyxjQUFULENBQXdCLFlBQXhCO01BQ1IsT0FBQSxHQUFVLFFBQVEsQ0FBQyxjQUFULENBQXdCLGNBQXhCO01BQ1YsSUFBRyxDQUFDLElBQUksQ0FBQyxLQUFOLElBQWUsQ0FBQyxLQUFLLENBQUMsS0FBdEIsSUFBK0IsQ0FBQyxPQUFPLENBQUMsS0FBM0M7UUFDRSxRQUFRLENBQUMsS0FBVCxDQUFlLDJCQUFmO0FBQ0EsZUFBTyxNQUZUO09BQUEsTUFBQTtRQUlFLENBQUMsQ0FBQyxJQUFGLENBQ0U7VUFBQSxNQUFBLEVBQVEsTUFBUjtVQUNBLEdBQUEsRUFBSyxtQ0FETDtVQUVBLElBQUEsRUFBTSxDQUFBLENBQUUsZUFBRixDQUFrQixDQUFDLFNBQW5CLENBQUEsQ0FGTjtVQUdBLFFBQUEsRUFBVTtRQUhWLENBREY7UUFLQSxDQUFDLENBQUMsY0FBRixDQUFBO1FBQ0EsQ0FBQSxDQUFFLElBQUYsQ0FBTyxDQUFDLEdBQVIsQ0FBWSxDQUFaLENBQWMsQ0FBQyxLQUFmLENBQUE7ZUFDQSxRQUFRLENBQUMsT0FBVCxDQUFpQixjQUFqQixFQVhGOztJQUp3QixDQUExQjtFQURnQixDQUFsQjtBQUFBIiwic291cmNlc0NvbnRlbnQiOlsiJChkb2N1bWVudCkucmVhZHkgLT5cbiAgJCgnI2NvbnRhY3QtZm9ybScpLnN1Ym1pdCAoZSkgLT5cbiAgICBuYW1lID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2lucHV0TmFtZScpXG4gICAgZW1haWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnaW5wdXRFbWFpbCcpXG4gICAgbWVzc2FnZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdpbnB1dE1lc3NhZ2UnKVxuICAgIGlmICFuYW1lLnZhbHVlIG9yICFlbWFpbC52YWx1ZSBvciAhbWVzc2FnZS52YWx1ZVxuICAgICAgYWxlcnRpZnkuZXJyb3IgJ1BsZWFzZSBjaGVjayB5b3VyIGVudHJpZXMnXG4gICAgICByZXR1cm4gZmFsc2VcbiAgICBlbHNlXG4gICAgICAkLmFqYXhcbiAgICAgICAgbWV0aG9kOiAnUE9TVCdcbiAgICAgICAgdXJsOiAnLy9mb3Jtc3ByZWUuaW8vbmFtZUB5b3VyZW1haWwuY29tJ1xuICAgICAgICBkYXRhOiAkKCcjY29udGFjdC1mb3JtJykuc2VyaWFsaXplKClcbiAgICAgICAgZGF0YXR5cGU6ICdqc29uJ1xuICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpXG4gICAgICAkKHRoaXMpLmdldCgwKS5yZXNldCgpXG4gICAgICBhbGVydGlmeS5zdWNjZXNzICdNZXNzYWdlIHNlbnQnIl19
+//# sourceURL=coffeescript
+</script>
+
    </head>
 <body>
 
@@ -327,27 +360,29 @@ Excellent interpersonal and communication skills with strong leadership qualitie
 </div>
 
 
+
+
 <!-- Contact form -->
 <div class="contact-form" id="contact">
  <div class="container">
-  <form>
+  <form id="contact-form" action="https://formspree.io/amitpandit09@gmail.com" method="POST">
    <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h1>Get in Touch</h1> 
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12 right">
        <div class="form-group">
-         <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
+         <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="name" id="inputName">
        </div>
        <div class="form-group">
-         <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
+         <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email" id="inputEmail">
        </div>
        <div class="form-group">
-         <textarea class="form-control form-control-lg">
+         <textarea class="form-control form-control-lg" id="inputMessage">
           
          </textarea>
        </div>
-       <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+       <input type="submit" class="btn btn-secondary btn-block" value="Send" name="" id="email-submit-btn">
     </div>
    </div>
   </form>
@@ -355,8 +390,11 @@ Excellent interpersonal and communication skills with strong leadership qualitie
 </div>
 
 <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src='main.js'></script>
-
+<!--====== Javascripts & Jquery ======-->
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
 </body>
 </html>
