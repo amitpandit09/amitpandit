@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+ <title>
+      N item Swap
+      </title>
+   </head> 
+   <body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+      <ul class="navigation">
+         <li><a href="index.html">Home</a></li>
+         <li>Sign in</li>
+      </ul>
+      <article class="articleClass">
+         <h2>Congratulations !! </h2>
+         <p>You have succesfully swapped the item.We will send you a mail with your order details and its status.(Estimated time is 48 hours). Mean while we are working on your order, Please provide your valuable feedback</p>
+         <section>
+            <h3>Please provide your feedback for the user !</h3>
+            <form method="POST" action="/offerFeedback">
+            <table class="sectionTable">
+               <tr>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>Enter the userId to be rated</th>
+                  <th><input type="text" name="userIdToBeRated" size="15"></th>
+               </tr>
+               <tr>
+                  <th>Rating</th>
+                  <th><input type="text" name="ratingToUser" size="15"></th>
+               </tr>
+                <tr>
+                  <th>Comments</th>
+                  <th><input type="text" name="comments" size="15"></th>
+               </tr>
+                <tr>
+                  <th>ItemCode</th>
+                  <th><input type="text" name="itemCode" size="15"></th>
+               </tr>
+                <tr>
+                  <th>Rate the item</th>
+                  <th><input type="text" name="ratingToItem" size="15"></th>
+               </tr>
+                  <th></th>
+                  <th><button input=submit name="submit" value="submit">Submit</button></th>
+
+               </tr>
+            </table>
+         </form>
+         </section>
+      </article>
+       <% include partials/footer.ejs %>
+   </body>
+</html>

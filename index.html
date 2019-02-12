@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="main.css">
+ <title>
+      Home
+      </title>
+	  
+	  <script>
+(function() {
+  $(document).ready(function() {
+    return $('#contact-form').submit(function(e) {
+      var email, message, name;
+      name = document.getElementById('inputName');
+      email = document.getElementById('inputEmail');
+      message = document.getElementById('inputMessage');
+      if (!name.value || !email.value || !message.value) {
+        alert('Please check your entries');
+        return false;
+      } else {
+	  alert('run');
+        $.ajax({
+          method: 'POST',
+          url: 'https://formspree.io/amitpandit09@gmail.com',
+          data: $('#contact-form').serialize(),
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        return alert('Message sent');
+      }
+    });
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBQSxDQUFBLENBQUUsUUFBRixDQUFXLENBQUMsS0FBWixDQUFrQixRQUFBLENBQUEsQ0FBQTtXQUNoQixDQUFBLENBQUUsZUFBRixDQUFrQixDQUFDLE1BQW5CLENBQTBCLFFBQUEsQ0FBQyxDQUFELENBQUE7QUFDeEIsVUFBQSxLQUFBLEVBQUEsT0FBQSxFQUFBO01BQUEsSUFBQSxHQUFPLFFBQVEsQ0FBQyxjQUFULENBQXdCLFdBQXhCO01BQ1AsS0FBQSxHQUFRLFFBQVEsQ0FBQyxjQUFULENBQXdCLFlBQXhCO01BQ1IsT0FBQSxHQUFVLFFBQVEsQ0FBQyxjQUFULENBQXdCLGNBQXhCO01BQ1YsSUFBRyxDQUFDLElBQUksQ0FBQyxLQUFOLElBQWUsQ0FBQyxLQUFLLENBQUMsS0FBdEIsSUFBK0IsQ0FBQyxPQUFPLENBQUMsS0FBM0M7UUFDRSxRQUFRLENBQUMsS0FBVCxDQUFlLDJCQUFmO0FBQ0EsZUFBTyxNQUZUO09BQUEsTUFBQTtRQUlFLENBQUMsQ0FBQyxJQUFGLENBQ0U7VUFBQSxNQUFBLEVBQVEsTUFBUjtVQUNBLEdBQUEsRUFBSyxtQ0FETDtVQUVBLElBQUEsRUFBTSxDQUFBLENBQUUsZUFBRixDQUFrQixDQUFDLFNBQW5CLENBQUEsQ0FGTjtVQUdBLFFBQUEsRUFBVTtRQUhWLENBREY7UUFLQSxDQUFDLENBQUMsY0FBRixDQUFBO1FBQ0EsQ0FBQSxDQUFFLElBQUYsQ0FBTyxDQUFDLEdBQVIsQ0FBWSxDQUFaLENBQWMsQ0FBQyxLQUFmLENBQUE7ZUFDQSxRQUFRLENBQUMsT0FBVCxDQUFpQixjQUFqQixFQVhGOztJQUp3QixDQUExQjtFQURnQixDQUFsQjtBQUFBIiwic291cmNlc0NvbnRlbnQiOlsiJChkb2N1bWVudCkucmVhZHkgLT5cbiAgJCgnI2NvbnRhY3QtZm9ybScpLnN1Ym1pdCAoZSkgLT5cbiAgICBuYW1lID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2lucHV0TmFtZScpXG4gICAgZW1haWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnaW5wdXRFbWFpbCcpXG4gICAgbWVzc2FnZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdpbnB1dE1lc3NhZ2UnKVxuICAgIGlmICFuYW1lLnZhbHVlIG9yICFlbWFpbC52YWx1ZSBvciAhbWVzc2FnZS52YWx1ZVxuICAgICAgYWxlcnRpZnkuZXJyb3IgJ1BsZWFzZSBjaGVjayB5b3VyIGVudHJpZXMnXG4gICAgICByZXR1cm4gZmFsc2VcbiAgICBlbHNlXG4gICAgICAkLmFqYXhcbiAgICAgICAgbWV0aG9kOiAnUE9TVCdcbiAgICAgICAgdXJsOiAnLy9mb3Jtc3ByZWUuaW8vbmFtZUB5b3VyZW1haWwuY29tJ1xuICAgICAgICBkYXRhOiAkKCcjY29udGFjdC1mb3JtJykuc2VyaWFsaXplKClcbiAgICAgICAgZGF0YXR5cGU6ICdqc29uJ1xuICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpXG4gICAgICAkKHRoaXMpLmdldCgwKS5yZXNldCgpXG4gICAgICBhbGVydGlmeS5zdWNjZXNzICdNZXNzYWdlIHNlbnQnIl19
+//# sourceURL=coffeescript
+</script>
+
+   </head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg fixed-top ">  
+ <a class="navbar-brand" href="#">Home</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+ <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+ <li class="nav-item">
+     <a class="nav-link" data-value="about" href="#">About me</a>        </li>  
+<li class="nav-item">
+    <a class="nav-link " data-value="projects"href="#">Projects</a>    
+ </li>
+ <li class="nav-item">
+ <a class="nav-link " data-value="work" href="#">Work experience</a>    
+ </li>
+ <li class="nav-item">
+ <a class="nav-link " data-value="education"href="#">Education</a>    
+ </li>
+ <li class="nav-item"> 
+    <a class="nav-link " data-value="blog" href="#">Blog</a>         </li>    
+<li class="nav-item"> 
+ <a class="nav-link " data-value="contact" href="#">Contact Me</a>       </li> 
+</ul> 
+</div></nav>
+
+
+
+
+<header class="header">
+  <div class="overlay">
+    <div class="container">
+
+<div class="description">
+   <h1>    Hello ,Welcome To My official Website
+    <p> 
+    I am graduate student of MS in Information Technology department,University of North Carolina at Charlotte having majors in emerging technologies. I am primarily interested in full stack development, cloud platform and other distributed open source technologies. <br>
+    - Amit   
+</p>   
+ <!--<button class="btn btn-outline-secondary btn-lg">See more</button>  -->
+  </h1>
+</div>
+</div>
+</div>
+</header>
+ 
+
+ <div class="about" id="about">
+  <div class="container">
+<h1 class="text-center">About Me</h1>
+ <div class="row">
+   <div class="col-lg-4 col-md-4 col-sm-12">
+    <img src="profilepic.jpg" class="img-fluid">
+    <span class="text-justify">Graduate Student,UNCC</span>
+    </span>
+   </div>
+   <div class="col-lg-8 col-md-8 col-sm-12 desc">
+     
+    <h3>Amit Pandit</h3>
+    <p>
+         Currently working as a Research Assistant in WNS Lab, University of North Carolina at Charlotte ( UNCC ).
+In past, worked with Bank of New York Mellon Technology ( Platform Engineering team ) to develop and maintain the Cloud Platform.
+Having a strong grasp on programming and scripting languages.
+Expert in DevOps tools, front end technologies and implementing RESTful services.
+Focused towards exploring new technologies and ameliorating the existing ones.
+Academic Projects and Research Paper on Cloud Computing.
+Excellent interpersonal and communication skills with strong leadership qualities.<br><br>
+<b><u>Certifications</u></b>
+<br>
+<ul>
+  <li>Certified Amazon Web Services Solutions Architect Associate ( Cloud Architect )</li>
+  <li>Certified AWS Developer Associate</li>
+</ul>  
+<br> 
+
+    </p>
+    <a href="tel:+4411122233344">(US) +1 704 858 4826 (India) +91 9765880144</a>
+    <br>apandit5@uncc.edu
+   </div>
+  </div> 
+</div>
+</div>
+
+
+<!-- projects -->
+<div class="projects" id="projects">
+     <h1 class="text-center">Projects</h1>
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-4 col-md-4 col-sm-12">
+    <a href="reengineeringlcoud.html" ><img src="cloud-platform.jpg" class="img-fluid">
+      
+    <span class="text-center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Re-Engineering of Cloud Platform</b> </span></a>
+   </div>
+   <div class="col-lg-4 col-md-4 col-sm-12">
+    <img src="CloudMigration.jpg" class="img-fluid">
+    <span class="text-center"><b> Migration of legacy apps to Cloud Platform</b></span>
+   </div>
+   <div class="col-lg-4 col-md-4 col-sm-12">
+    <img src="cloudplatform.png" class="img-fluid">
+    <span class="text-center"><b> Architectural framework of Cloud Computing</b></span>
+   </div>
+<div class="col-lg-4 col-md-4 col-sm-12">
+    <img src="foss.png" class="img-fluid">
+    <span class="text-center"><b> FOSS = Free Open Source Tool development</b></span>
+   </div>
+   <div class="col-lg-4 col-md-4 col-sm-12">
+    <img src="book-swap.jpg" class="img-fluid">
+    <span class="text-center"><b> "N" item Swapping Portal</b></span>
+   </div>
+   <div class="col-lg-4 col-md-4 col-sm-12">
+    <img src="bearing.jpg" class="img-fluid">
+    <span class="text-center"><b> Bearing Selection for Machine design</b></span>
+   </div>
+
+  </div>
+ </div>
+</div>
+
+<!-- work experience-->
+<div class="work" id="work">
+  <div class="container">
+    <h1 class="text-center">Work Experience</h1>
+  <div class="row">
+   
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card1">
+     <div class="card-img">
+      <img src="uncc.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body1">
+     <h4 class="card-title1">University of North Carolina,Charlotte</h4>
+      <p class="card-text">
+      August,2018 - Present <br>
+      Research Assistant,WNS Lab<br>
+      <br>‣ Experimenting with DCOS + Kubernetes with SDN framework for AI and DL applications.
+      <br>‣ Contributing towards the open source community by implementing modules and automation for DCOS.
+	  <br>‣ Analyzing the performance results of DCOS + kubernetes test bed for wireless devices.
+      </p>
+     </div>
+     <div class="card-footer">
+      DCOS,Kubernetes,SDN,AI,DL.
+     </div>
+    </div>
+   </div>
+
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card2">
+     <div class="card-img">
+      <img src="bny.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body2">
+     <h4 class="card-title2">Bank of New York Mellon Technology,Pune</h4>
+      <p class="card-text">
+      July,2014 - June,2018 <br>
+      Senior System Engineer/Programmer<br>
+      <br>‣ Contributed to the development and reengineering of Cloud platform of BNY Mellon (BNY Mellon eXtreme Platform, BXP, Now called as AppEngine). 
+      <br>‣ Developed various migration solutions for applications such as authentication services , storage services and scheduling components.
+      <br>‣ Developed a Free Open Source Scanning (FOSS) tool for BNY Mellon users to scan open source artifacts.
+      <br>‣ Developed a migration tool to seamlessly migrate the applications from legacy environment to cloud platform.
+      <br>‣ Provided technical support to the users of BXP and assisted application teams in migrating their application from virtual machine based cloud platform to docker based cloud platform. 
+      </p>
+     </div>
+     <div class="card-footer">
+      AWS,Dockers & Containers,Angular JS,HTML,CSS,Springboot,Core Java,Python,Shell Scripting.
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+
+
+<!-- education-->
+<div class="education" id="education">
+  <div class="container">
+  <h1 class="text-center">Education</h1>
+  <div class="row">
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="uncc.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+     <h4 class="card-title">University of North Carolina,Charlotte</h4>
+      <p class="card-text">
+        August,2018 - Present<br>
+        MS in Information Technology
+      </p>
+     </div>
+     <div class="card-footer">
+      COURSE WORK
+      <ul>
+  <li>Data Structures & Algorithms</li>
+  <li>Network Based Development</li>
+  <li>Applied Databases</li>
+  <li>Principles of Information Security</li>
+  </ul>  
+     </div>
+    </div>
+   </div>
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="mitpune.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+        <h4 class="card-title">University of Pune</h4>
+      <p class="card-text">July,2011 - May,2014<br>(Maharashtra Institute of Technology) <br>Bachelor of Computer Engineering<br>
+      </p>
+     </div>
+     <div class="card-footer">
+      COURSE WORK
+       <ul>
+   <li>Analysis and Design of Algorithms</li>
+  <li>Programming languages C,C++</li>
+  <li>Computer Networking & Security</li>
+  <li>Operating Systems</li>
+
+  </ul> 
+     </div>
+    </div>
+   </div>
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="kkwagh.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+     <h4 class="card-title">K K Wagh Polytechnic</h4>
+      <p class="card-text">May,2008 - June,2011 <br> Diploma in Computer Technology<br><br>
+      </p>
+     </div>
+     <div class="card-footer">
+      COURSE WORK
+       <ul>
+  <li>Database Systems</li>
+  <li>Object modelling & Design</li>
+  <li>Computer Graphics</li>
+  <li>Software Engineering</li>
+  </ul> 
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- Posts section -->
+<div class="blog" id="blog">
+ <div class="container">
+ <h1 class="text-center">Blog</h1>
+  <div class="row">
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="aws.png" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+     <h4 class="card-title">AWS certification roadmap path</h4>
+      <p class="card-text">
+       You want to get AWS certified ? Go through my arcticle to know the steps to crack it.
+      </p>
+     </div>
+     <div class="card-footer">
+      <a href="https://medium.com/@apandit5/getting-aws-solutions-architect-developer-associate-31b77910b02a" class="card-link">Read more</a>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="dcos1.png" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+        <h4 class="card-title">Setting up DCOS Mesosphere</h4>
+      <p class="card-text">
+       Eager to know what is DCOS ? Play with it by setting up on your virtual machines.
+      </p>
+     </div>
+     <div class="card-footer">
+      <a href="https://medium.com/@apandit5/setting-up-dcos-mesosphere-in-ubuntu-16-04-71b010d1c167" class="card-link">Read more</a>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="kubernetes.png" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+     <h4 class="card-title">Deploy an app using kubernetes</h4>
+      <p class="card-text">
+       
+       You want to know how to deploy an app on kubernetes ?
+	   <b>Coming soon !!</b>
+      </p>
+     </div>
+     <div class="card-footer">
+      <a href="" class="card-link">Read more</a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+<!-- Contact form -->
+<div class="contact-form" id="contact">
+ <div class="container">
+  <form id="contact-form" action="https://formspree.io/amitpandit09@gmail.com" method="POST">
+   <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h1>Get in Touch</h1> 
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 right">
+       <div class="form-group">
+         <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="name" id="inputName">
+       </div>
+       <div class="form-group">
+         <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email" id="inputEmail">
+       </div>
+       <div class="form-group">
+         <textarea class="form-control form-control-lg" id="inputMessage">
+          
+         </textarea>
+       </div>
+       <input type="submit" class="btn btn-secondary btn-block" value="Send" name="" id="email-submit-btn">
+    </div>
+   </div>
+  </form>
+ </div>
+</div>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src='main.js'></script>
+<!--====== Javascripts & Jquery ======-->
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+</body>
+</html>

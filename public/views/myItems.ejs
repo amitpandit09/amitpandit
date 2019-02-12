@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <title>
+      N item Swap
+      </title>
+   </head>
+   <body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+      <ul class="navigation">
+         <li><a href="index.html">Home</a></li>
+         <li>My items</li>
+      </ul>
+      <article class="articleClass">
+         <h2>Items for swap</h2>
+         <section>
+            <h3>Add/Update the items for swap</h3>
+            <br>
+            <form action="/myItems" method="POST">
+            <table class="sectionTable">
+               <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>My Rating</th>
+                  <th>Swapped</th>
+                  <th>Action</th>
+               </tr>
+                <% for(var j=0; j < listOfUserItems.listOfItems.length; j++) { %>
+               <tr>
+                  <td><a href="item"><%= listOfUserItems.listOfItems[j].itemName %></a></td>
+                  <td><%= listOfUserItems.listOfItems[j].categoryName %></td>
+                  <td><%= listOfUserItems.listOfItems[j].rating %></td>
+                  <td><%= listOfUserItems.listOfItems[j].status %></td>
+                  <td><button input=submit name="update" value='<%= listOfUserItems.listOfItems[j].itemCode %>'>Update</button>&nbsp;<button input=submit name="delete" value='<%= listOfUserItems.listOfItems[j].itemCode %>'>Delete</button></td>
+               </tr>
+               <% } %>
+            </table>
+            <br><br>
+            Legend : 
+            <table>
+               <tr>
+                  <td>
+                     <img src="/resources/reload.jpg" alt="star" height="20" width="20">swap available
+                  </td>
+               </tr>
+               <tr>
+                  <td><br><img src="/resources/tick.png" alt="tick" height="20" width="20"> already swapped</td>
+               </tr>
+               
+            </table>
+            </form>
+         </section>
+      </article>
+      <% include partials/footer.ejs %>
+   </body>
+</html>
